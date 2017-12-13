@@ -22,7 +22,7 @@ def main():
                 for message in data['messages']:
                     print("Got message:", message['data']['network'])
                     with open("Data/"+message['data']['network']+message['data']['txid']+".json",'w') as f:
-                        json.dump(message, f)
+                        json.dump(message, f)   
 
 
         subscription_observer = SubscriptionObserver()

@@ -33,7 +33,7 @@ create_table_transport = """
 
 CREATE TABLE altcoins(
    head_rt_version double PRIMARY KEY,
-   head_time_stamp timestamp,
+   head_time_stamp timestamp,  
    head_user_data varchar,
    id varchar,
    is_deleted Boolean,

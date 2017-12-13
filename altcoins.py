@@ -3,6 +3,8 @@
 from __future__ import print_function
 
 import sys
+sys.path.insert(0,'application_key')
+import application_key
 import time
 import json
 
@@ -10,11 +12,10 @@ import json
 from satori.rtm.client import make_client, SubscriptionMode
 
 endpoint = "wss://open-data.api.satori.com"
-appkey = "Ef8FaF5d8514b770C7ca0aDBFe4FcedF"
 channel = "altcoins"
 
 def main():
-    with make_client(endpoint=endpoint, appkey=appkey) as client:
+    with make_client(endpoint=endpoint, appkey=application_key.appkey) as client:
         print('Connected to Satori RTM!')
 
         class SubscriptionObserver(object):
@@ -22,7 +23,7 @@ def main():
                 for message in data['messages']:
                     print("Got message:", message['data']['network'])
                     with open("Data/"+message['data']['network']+message['data']['txid']+".json",'w') as f:
-                        json.dump(message, f)   
+                        json.dump(message, f)
 
 
         subscription_observer = SubscriptionObserver()

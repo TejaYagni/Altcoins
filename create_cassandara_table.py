@@ -29,7 +29,7 @@ CREATE TYPE IF NOT EXISTS altcoins_keyspace.outputs_type (
 """
 
 create_type_data = """
-CREATE TYPE altcoins_keyspace.data_type (
+CREATE TYPE IF NOT EXISTS altcoins_keyspace.data_type (
     txid text,
     confirmations int,
     block_hash text,
@@ -47,9 +47,8 @@ CREATE TYPE altcoins_keyspace.data_type (
 create_table_altcoins = """
 
 CREATE TABLE IF NOT EXISTS altcoins(
-   txid varchar PRIMARY KEY ,
    type varchar,
-   data frozen<data_type>
+   data frozen<data_type> PRIMARY KEY
    );
 
 """

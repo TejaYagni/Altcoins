@@ -22,36 +22,13 @@ channel = "altcoins"
 
 def main():
     with make_client(endpoint=endpoint, appkey=application_key.appkey) as client:
-        session.execute("INSERT INTO abc(val, val2) values (2,'king');")
         print('Connected to Satori RTM!')
 
         class SubscriptionObserver(object):
             def on_subscription_data(self, data):
                 for message in data['messages']:
                     print("Got message:", message['data']['network'])
-                    '''
-                    session.execute("INSERT INTO altcoins("
-                                    " txid, "
-                                    " data.network, "
-                                    " data.txid, "
-                                    " data.received_at, "
-                                    " data.network_fee, "
-                                    " data.amount_received, "
-                                    " data.inputs, "
-                                    " data.outputs ) "
-                                    "values "
-                                    "( "
-                                    +message['data']['txid'] + \
-                                    +message['data']['network'] \
-                                    +message['data']['txid'] \
-                                    +message['data']['received_at'] \
-                                    +message['data']['network_fee'] \
-                                    +message['data']['amount_received'] \
-                                    +message['data']['inputs'] \
-                                    +message['data']['outputs']
-                                    +");"
-                                    )
-'''
+                    session.execute("INSERT INTO altcoins JSON"+message)
 
         subscription_observer = SubscriptionObserver()
         client.subscribe(

@@ -27,9 +27,6 @@ def main():
         class SubscriptionObserver(object):
             def on_subscription_data(self, data):
                 for message in data['messages']:
-                    #print(type(json.dumps(message)))
-                    #print("Got message:", message.encode("ascii","replace"),"\n")
-                    #print("Got message:", ast.literal_eval(json.dumps(message)), "\n")
                     session.execute("INSERT INTO altcoins_keyspace.altcoins JSON '"+json.dumps(message)+ "' ;" )
 
         subscription_observer = SubscriptionObserver()

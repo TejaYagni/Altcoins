@@ -65,6 +65,9 @@ CREATE TYPE IF NOT EXISTS altcoins_keyspace.data_type2 (
     confirmations int,
     time bigint,
     previous_block_hash text,
+    version bigint, 
+    cbvalue float,
+    ismainchain boolean,
     txs set<text>
 );
 

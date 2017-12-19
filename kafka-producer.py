@@ -30,7 +30,15 @@ def main():
                     #msg = str(message).encode("utf-8")
                     print (json.dumps(message))
                     #print(message['data']['network'])
-                    if(message['data']['network'] == 'LTC' | 'DOGE'):
+                    if (message['data']['network'] == 'DASH'):
+                        try:
+                            a = message['data']['nonce']
+                            producer.send(topic2, json.dumps(message))
+                            producer.flush()
+                        except:
+                            producer.send(topic, json.dumps(message))
+                            producer.flush()
+                    elif(message['data']['network'] == 'LTC' or message['data']['network'] == 'DOGE'):
                         producer.send(topic2,json.dumps(message))
                         producer.flush()
                     else:

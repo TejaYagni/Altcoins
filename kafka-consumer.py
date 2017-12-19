@@ -12,10 +12,12 @@ session = cluster.connect("altcoins_keyspace")
 
 
 def main():
-    consumer = KafkaConsumer('altcoins')
+    topic = sys.argv[1];
+    consumer = KafkaConsumer(topic)
     for msg in consumer:
-        print (sys.argv)
-        session.execute("INSERT INTO altcoins_keyspace.altcoins JSON '"+msg[6]+ "';")
+        print (topic+"\n \n")
+        print (msg[6])
+        session.execute("INSERT INTO altcoins_keyspace."+topic+" JSON '"+msg[6]+ "';")
 
 
 

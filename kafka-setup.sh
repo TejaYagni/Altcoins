@@ -14,3 +14,4 @@ bin/kafka-server-start.sh config/server.properties > tmp/kafka_server.logs &
 
 # Create a kafka topic
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic altcoins
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic altcoins2

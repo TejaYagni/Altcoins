@@ -27,9 +27,7 @@ def main():
         class SubscriptionObserver(object):
             def on_subscription_data(self, data):
                 for message in data['messages']:
-                    #msg = str(message).encode("utf-8")
                     print (json.dumps(message))
-                    #print(message['data']['network'])
                     if (message['data']['network'] == 'DASH'):
                         try:
                             a = message['data']['nonce']

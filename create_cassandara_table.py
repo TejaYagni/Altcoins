@@ -16,6 +16,7 @@ CREATE TYPE IF NOT EXISTS altcoins_keyspace.inputs_type (
     confirmations int,
     unconfirmedinput boolean,
     doublespenttxid bigint
+    output_no int
 );
 """
 create_type_outputs = """
@@ -52,9 +53,33 @@ CREATE TABLE IF NOT EXISTS altcoins(
    );
 
 """
+
+create_type_datatype2 = """
+CREATE TYPE IF NOT EXISTS altcoins_keyspace.data_type2 (
+    nonce bigint,
+    network text,
+    merkle_root text,
+    block_no bigint,
+    block_hash text,
+    difficulty float,
+    confirmations int,
+    time bigint,
+    previous_block_hash text,
+    txs set<text>
+);
+
+"""
+
+create_table_altcoins2 = """
+CREATE TABLE IF NOT EXISTS altcoins_keyspace.altcoins2 (
+    data frozen<data_type2> PRIMARY KEY,
+    type text
+)
+"""
 print(session.execute(create_keyspace))
 print(session.execute("use altcoins_keyspace"))
 print(session.execute(create_type_inputs))
 print(session.execute(create_type_outputs))
 print(session.execute(create_type_data))
 print(session.execute(create_table_altcoins))
+print(session.execute(create_type_datatype2))

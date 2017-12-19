@@ -25,8 +25,10 @@ def main():
         print('Connected to Satori RTM!')
 
         class SubscriptionObserver(object):
+
             def on_subscription_data(self, data):
                 for message in data['messages']:
+                    print(message)
                     session.execute("INSERT INTO altcoins_keyspace.altcoins JSON '"+json.dumps(message)+ "' ;" )
 
         subscription_observer = SubscriptionObserver()

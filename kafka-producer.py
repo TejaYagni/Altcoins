@@ -7,6 +7,8 @@ sys.path.insert(0,'application_key')
 import application_key
 import time
 
+import json, ast
+
 from satori.rtm.client import make_client, SubscriptionMode
 
 from kafka import KafkaProducer
@@ -24,10 +26,9 @@ def main():
         class SubscriptionObserver(object):
             def on_subscription_data(self, data):
                 for message in data['messages']:
-                    #print(message)
-                    msg = str(message).encode()
-                    print(msg)
-                    producer.send(topic, msg)
+                    #msg = str(message).encode("utf-8")
+                    print (json.dumps(message))
+                    producer.send(topic,json.dumps(message))
                     producer.flush()
 
         subscription_observer = SubscriptionObserver()

@@ -2,6 +2,7 @@
 
 from kafka import KafkaConsumer
 import json
+import sys
 
 from cassandra.cluster import Cluster
 
@@ -13,7 +14,7 @@ session = cluster.connect("altcoins_keyspace")
 def main():
     consumer = KafkaConsumer('altcoins')
     for msg in consumer:
-        print (msg[6])
+        print (sys.argv)
         session.execute("INSERT INTO altcoins_keyspace.altcoins JSON '"+msg[6]+ "';")
 
 

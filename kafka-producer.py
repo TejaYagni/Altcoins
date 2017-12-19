@@ -17,6 +17,7 @@ from kafka import KafkaProducer
 endpoint = "wss://open-data.api.satori.com"
 channel = "altcoins"
 topic = "altcoins"
+topic2 = "altcoins2"
 producer = KafkaProducer(bootstrap_servers='localhost:9092')
 
 def main():
@@ -28,8 +29,13 @@ def main():
                 for message in data['messages']:
                     #msg = str(message).encode("utf-8")
                     print (json.dumps(message))
-                    producer.send(topic,json.dumps(message))
-                    producer.flush()
+                    #print(message['data']['network'])
+                    if(message['data']['network'] == 'LTC' | 'DOGE'):
+                        producer.send(topic2,json.dumps(message))
+                        producer.flush()
+                    else:
+                        producer.send(topic, json.dumps(message))
+                        producer.flush()
 
         subscription_observer = SubscriptionObserver()
         client.subscribe(

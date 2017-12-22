@@ -1,1 +1,3 @@
-Collecting crypto currency data and moving it to cassandra to perform analysis
+Collect data from streaming end points using Kafka, created two topics for two different structures of data. Moved data to Cassandra tables.
+
+Code in this consists of Kafka producers and consumer as well as code for creating cassandra keyspaces and tables. It also contains creation of Kafka topics.

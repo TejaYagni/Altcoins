@@ -84,12 +84,14 @@ drop_table_altcoins = """
 DROP TABLE IF EXISTS altcoins_keyspace.altcoins
 """
 
-drop_table_altcoins = """
+drop_table_altcoins2 = """
 DROP TABLE IF EXISTS altcoins_keyspace.altcoins2
 """
 
 print(session.execute(create_keyspace))
 print(session.execute("use altcoins_keyspace"))
+print(session.execute(drop_table_altcoins))
+print(session.execute(drop_table_altcoins2))
 print(session.execute(create_type_inputs))
 print(session.execute(create_type_outputs))
 print(session.execute(create_type_data))

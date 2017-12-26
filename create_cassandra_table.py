@@ -15,7 +15,7 @@ CREATE TYPE IF NOT EXISTS altcoins_keyspace.inputs_type (
     confirmed boolean,
     confirmations int,
     unconfirmedinput boolean,
-    doublespenttxid bigint
+    doublespenttxid bigint,
     output_no int
 );
 """

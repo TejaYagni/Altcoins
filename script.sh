@@ -1,13 +1,13 @@
 #!/bin/bash
 
-python cassandraToS3.py &
+python /home/harvee/scut/Data\ Mining/Altcoins/cassandraToS3.py &
 
-python create_cassandra_table.py &
+python /home/harvee/scut/Data\ Mining/Altcoins/create_cassandra_table.py &
 
-bash kafka-setup.sh &
+bash /home/harvee/scut/Data\ Mining/Altcoins/kafka-setup.sh &
 
-python kafka-producer.py &
+python /home/harvee/scut/Data\ Mining/Altcoins/kafka-producer.py &
 
-python kafka-consumer.py altcoins &
+python /home/harvee/scut/Data\ Mining/Altcoins/kafka-consumer.py altcoins &
 
-python kafka-consumer.py altcoins2 &
+python /home/harvee/scut/Data\ Mining/Altcoins/kafka-consumer.py altcoins2 &

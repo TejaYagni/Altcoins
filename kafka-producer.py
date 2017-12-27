@@ -27,10 +27,8 @@ def main():
         class SubscriptionObserver(object):
             def on_subscription_data(self, data):
                 for message in data['messages']:
-                    print (json.dumps(message))
                     if (message['data']['network'] == 'DASH'):
                         try:
-                            a = message['data']['nonce']
                             producer.send(topic2, json.dumps(message))
                             producer.flush()
                         except:

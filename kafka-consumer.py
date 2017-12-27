@@ -15,8 +15,6 @@ def main():
     topic = sys.argv[1];
     consumer = KafkaConsumer(topic)
     for msg in consumer:
-        print (topic+"\n \n")
-        print (msg[6])
         session.execute("INSERT INTO altcoins_keyspace."+topic+" JSON '"+msg[6]+ "';")
 
 

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9908755-60bf-4920-9f25-1aa07aec5af8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dailyjob.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kafka-consumer.py" afterPath="$PROJECT_DIR$/kafka-consumer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kafka-producer.py" afterPath="$PROJECT_DIR$/kafka-producer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_cassandra_table.py" afterPath="$PROJECT_DIR$/create_cassandra_table.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script.sh" afterPath="$PROJECT_DIR$/script.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bucket_details.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bucket_details.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bucket_details.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -51,20 +51,31 @@
       <file leaf-file-name="cassandraToS3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cassandraToS3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#477#665#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_cassandra_table.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_cassandra_table.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_cassandra_table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+            <state relative-caret-position="255">
+              <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dailyjob.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dailyjob.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +94,8 @@
       <file leaf-file-name="script.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -154,13 +165,14 @@
         <option value="$PROJECT_DIR$/temp.py" />
         <option value="$PROJECT_DIR$/altcoins.py" />
         <option value="$PROJECT_DIR$/bucket_details.py" />
-        <option value="$PROJECT_DIR$/cassandraToS3.py" />
         <option value="$PROJECT_DIR$/create_cassandara_table.py" />
-        <option value="$PROJECT_DIR$/script.sh" />
         <option value="$PROJECT_DIR$/kafka-setup.sh" />
-        <option value="$PROJECT_DIR$/create_cassandra_table.py" />
         <option value="$PROJECT_DIR$/kafka-producer.py" />
         <option value="$PROJECT_DIR$/kafka-consumer.py" />
+        <option value="$PROJECT_DIR$/cassandraToS3.py" />
+        <option value="$PROJECT_DIR$/script.sh" />
+        <option value="$PROJECT_DIR$/dailyjob.sh" />
+        <option value="$PROJECT_DIR$/create_cassandra_table.py" />
       </list>
     </option>
   </component>
@@ -352,6 +364,7 @@
           <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#477#665#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -404,6 +417,7 @@
           <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#477#665#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -555,22 +569,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/create_cassandara_table.py" />
-    <entry file="file://$PROJECT_DIR$/script.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka-setup.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kafka-producer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -589,28 +587,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_cassandra_table.py">
+    <entry file="file://$PROJECT_DIR$/bucket_details.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka-setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cassandraToS3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="340">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#477#665#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bucket_details.py">
+    <entry file="file://$PROJECT_DIR$/dailyjob.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_cassandra_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
           <folding />
         </state>
       </provider>

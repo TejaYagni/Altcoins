@@ -58,6 +58,7 @@ create_type_datatype2 = """
 CREATE TYPE IF NOT EXISTS altcoins_keyspace.data_type2 (
     nonce bigint,
     network text,
+    inputs set<frozen<inputs_type>>,
     merkle_root text,
     block_no bigint,
     block_hash text,
